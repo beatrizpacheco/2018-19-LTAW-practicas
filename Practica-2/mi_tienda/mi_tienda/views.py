@@ -1,5 +1,7 @@
 from django.http import HttpResponse
+from django.template.loader import get_template
 from django.template import Template, Context
+from datetime import datetime
 
 def mi_funcion(request):
     html = "Hola! Esto es una prueba"
@@ -21,14 +23,18 @@ PLANTILLA = """
   <body>
 
       <p>Bienvenido a mi tienda, {{user}} </p>
+      <p>Son las  {{hora}} </p>
 
   </body>
 </html>
 """
 
 def saludo(request):
-    t = Template(PLANTILLA)
-    c = Context({'user':'Epic Saxo guy'})
+    now = datetime.now()
+    fp = open('/home/alumnos/bpacheco/2018-19-LTAW-practicas/Practica-2/mi_tienda/mi_tienda/cv.html')
+    t = Template(fp.read())
+    fp.close()
+    c = Context({' '})
 
     html = t.render(c)
     return HttpResponse(html)
