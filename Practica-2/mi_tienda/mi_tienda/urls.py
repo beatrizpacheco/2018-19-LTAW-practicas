@@ -19,10 +19,23 @@ from django.contrib import admin
 from mi_tienda.views import mi_funcion
 from mi_tienda.views import mi_producto
 from mi_tienda.views import saludo
+from mi_tienda.views import hora_actual
+from mi_tienda.views import cv
+from mi_tienda.views import cv_render
+from mi_tienda.views import index
+from mi_tienda.views import get
+from mi_tienda.views import main
+
 
 urlpatterns = [
+    url(r'^main/', index),
+    url(r'^get/', get),
+    url(r'^cv/', cv),
+    url(r'^curriculum/', cv_render),
+    url(r'^hora/', hora_actual),
     url(r'^hola/', mi_funcion),
     url(r'^saludo/', saludo),
     url(r'^producto/(\d{1,2})/$',mi_producto),
     url(r'^admin/', include(admin.site.urls)),
+    url(r'', main),
 ]
