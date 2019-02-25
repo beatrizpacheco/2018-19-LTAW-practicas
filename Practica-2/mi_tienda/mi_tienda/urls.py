@@ -28,7 +28,7 @@ from mi_tienda.views import main
 
 
 urlpatterns = [
-    url(r'^main/', index),
+    url(r'^main/', index), # r es regular, ^ contener esos caracteres, $ que termine
     url(r'^get/', get),
     url(r'^cv/', cv),
     url(r'^curriculum/', cv_render),
@@ -37,5 +37,5 @@ urlpatterns = [
     url(r'^saludo/', saludo),
     url(r'^producto/(\d{1,2})/$',mi_producto),
     url(r'^admin/', include(admin.site.urls)),
-    url(r'', main),
+    url(r'^$', main),
 ]
