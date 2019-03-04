@@ -1,17 +1,27 @@
-{% load staticfiles %}
-
 <!DOCTYPE html>
-<html lang="es" dir="ltr">
-  <head>
+<html>
+<head>
     <meta charset="utf-8">
-    <title>MI TIENDA</title>
-    <link rel="stylesheet" href="{% static 'css.css'%}">
-     <script src="{% static 'js.js' %}"></script>
-  </head>
-  <body onload="main();">
-    <p>BIENVENIDO A MI TIENDA con estilo y js</p>
-    <img src="/static/logo-urjc.png" alt="NOPE" id="logo">
-    <br>
-    <button type="button" id="boton">Click me</button>
-  </body>
+    <title>Tienda</title>
+    <title>Beatriz Pacheco Piñero</title>
+    <link rel="stylesheet" href="tienda.css">
+
+
+</head>
+
+<body>
+
+    <p id="title"> Tienda <p>
+    <p id="special"> Beatriz Pacheco </p>
+
+    <div class="mainslider">
+
+      <img onclick="window.location.href = 'bici.html'" src="bici.jpeg" width="200px" height="140px">
+      <img onclick="window.location.href = 'discos.html'" src="discos.jpeg" width="200px" height="140px">
+      <img onclick="window.location.href = 'libros.html'" src="libros.jpeg" width="200px" height="140px">
+
+    </div>
+
+</body>
+
 </html>
