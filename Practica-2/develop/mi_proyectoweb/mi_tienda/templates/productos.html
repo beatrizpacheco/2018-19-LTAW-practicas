@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>MI TIENDA</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'tienda.css'%}">
+  </head>
+  <body>
+    <a href='/'>Página principal</a>
+    {% for product in productos %}
+    <div class='products'>
+        <img src= '{{ product.image }}' width="200px" height="140px">
+        <span>{{ product.name }}</span>
+        <span>{{ product.price }}</span>
+        <span>{{ product.stock }}</span>
+    </div>
+    {% endfor %}
+  </body>
+</html>

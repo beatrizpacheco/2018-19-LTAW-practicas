@@ -2,29 +2,33 @@
 <html lang="es" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="tienda.css">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'tienda.css'%}">
+
     <title></title>
   </head>
   <body>
-    <a href='tienda.html'>Páina principal</a>
+    <a href='./'>Página principal</a>
+    {% load static %}
     <div>
       <h3>Bici 1</h3>
         <ul>
-          <img src="bici1.jpeg" width="200px" height="140px">
+
+          <img src="{% static 'bici1.jpeg'%}"  width="200px" height="140px">
           <p> Precio: 63€ </p>
           <p> Color: Negro </p>
           <p> Talla: S </p>
         </ul>
       <h3>Bici 2</h3>
         <ul>
-          <img src="bici2.jpeg" width="200px" height="140px">
+          <img src="{% static 'bici2.jpeg'%}" width="200px" height="140px">
           <p> Precio: 95€ </p>
           <p> Color: Rojo </p>
           <p> Talla: M </p>
         </ul>
       <h3>Bici 3</h3>
         <ul>
-          <img src="bici3.jpeg" width="200px" height="140px">
+          <img src="{% static 'bici3.jpeg'%}" width="200px" height="140px">
           <p> Precio: 127€ </p>
           <p> Color: Amarillo </p>
           <p> Talla: L </p>

@@ -2,27 +2,30 @@
 <html lang="es" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="tienda.css">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'tienda.css'%}">
+
     <title></title>
   </head>
   <body>
-    <a href='tienda.html'>Páina principal</a>
+    <a href='./'>Página principal</a>
+    {% load static %}
     <div>
       <h3>Disco 1</h3>
         <ul>
-          <img src="discos1.jpeg" width="200px" height="140px">
+          <img src="{% static 'discos1.jpeg'%}" width="200px" height="140px">
           <p> Precio: 11.45€ </p>
           <p> Cantante: La raiz: Entre petas y presos </p>
         </ul>
       <h3>Disco 2</h3>
         <ul>
-          <img src="discos2.jpeg" width="200px" height="140px">
+          <img src="{% static 'discos2.jpeg'%}" width="200px" height="140px">
           <p> Precio: 19.95€ </p>
           <p> Cantante: Boikot: Tus probelmas crecen </p>
         </ul>
       <h3>Disco 3</h3>
         <ul>
-          <img src="discos3.jpeg" width="200px" height="140px">
+          <img src="{% static 'discos3.jpeg'%}" width="200px" height="140px">
           <p> Precio: 13.99€ </p>
           <p> Cantante: La Pegatina: Ahora o nunca </p>
         </ul>

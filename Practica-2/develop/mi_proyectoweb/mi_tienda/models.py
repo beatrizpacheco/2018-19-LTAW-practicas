@@ -15,6 +15,7 @@ class Bici (models.Model):
 class Disco (models.Model):
     grupo = models.CharField(max_length=200)
     name = models.CharField(max_length=200)
+    image = models.CharField(max_length=200)
     stock = models.IntegerField()
     price = models.FloatField()
 
@@ -24,6 +25,7 @@ class Disco (models.Model):
 class Libro (models.Model):
     author = models.CharField(max_length=200)
     title = models.CharField(max_length=200)
+    image = models.CharField(max_length=200)
     stock = models.IntegerField()
     price = models.FloatField()
 

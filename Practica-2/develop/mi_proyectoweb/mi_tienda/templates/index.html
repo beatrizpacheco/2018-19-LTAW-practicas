@@ -15,11 +15,16 @@
     <p id="title"> Tienda </p>
     <p id="special"> Beatriz Pacheco </p>
 
+    <form method = "POST" >
+    <i class="fa fa-search"></i>
+    <input type="text" name="buscar" size="20"><br><br>
+    <input type="submit" value="Buscar">
+
     <div class="mainslider">
       {% load static %}
-      <img src="{% static 'bici.jpeg'%}"  onclick="window.location.href = './bici.html'"   src="bici.jpeg" width="200px" height="140px">
-      <img src="{% static 'discos.jpeg'%}" onclick="window.location.href = './discos.html'" src="discos.jpeg" width="200px" height="140px">
-      <img src="{% static 'libros.jpeg'%}" onclick="window.location.href = './libros.html'" src="libros.jpeg" width="200px" height="140px">
+      <img src="{% static 'bici.jpeg'%}"  onclick="window.location.href = 'bici'"   width="200px" height="140px">
+      <img src="{% static 'discos.jpeg'%}" onclick="window.location.href = 'discos'" width="200px" height="140px">
+      <img src="{% static 'libros.jpeg'%}" onclick="window.location.href = 'libros'" width="200px" height="140px">
 
     </div>
 

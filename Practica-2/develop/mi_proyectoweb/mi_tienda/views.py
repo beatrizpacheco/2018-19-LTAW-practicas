@@ -12,28 +12,16 @@ from mi_tienda.models import Libro
 def home_view (request):
     return render(request, "index.html", {})
 # src="{% static 'bici.jpeg'%}"  onclick="window.location.href = './bici.html'"   src="bici.jpeg" width="200px" height="140px"
-def list(request):
-    objects1 = Bici.objects.all()
-    objects2 = Disco.objects.all()
-    objects3 = Libro.objects.all()
-    html = "<p>Listado de articulos</p>" #PUTA MIERDA NO VA PERO CASI
-    for elt in objects1:
-        print(elt.name)
-        html += ' <img ' + elt.image + '>'
-        html += '<p>'+ elt.name + ' ' + str(elt.price) + '<p>'
-    for elt in objects2:
-        print(elt.name)
-        html += '<p>'+ elt.name + ' ' + str(elt.price) + '<p>'
-    for elt in objects3:
-        print(elt.name)
-        html += '<p>'+ elt.name + ' ' + str(elt.price) + '<p>'
-    return HttpResponse(html)
+
 
 def bici (request):
-    return render(request, "bici.html", {})
+    bici = Bici.objects.all()
+    return render(request, "productos.html", {'productos': bici})
 
 def discos (request):
-    return render(request, "discos.html", {})
+    discos = Disco.objects.all()
+    return render(request, "productos.html", {'productos': discos})
 
 def libros (request):
-    return render(request, "libros.html", {})
+    libros = Libro.objects.all()
+    return render(request, "productos.html", {'productos':libros})
