@@ -60,6 +60,17 @@ http.createServer((req, res) => {
       return
       break
 
+    case "/form":
+
+      fs.readFile("./form1.html", function(err, data) {
+        //-- Generar el mensaje de respuesta
+        res.writeHead(200, {'Content-Type': 'text/html'});
+        res.write(data);
+        res.end();
+        return
+      });
+      break;
+
     //-- Se intenta acceder a un recurso que no existe
     default:
       content = "Error";
