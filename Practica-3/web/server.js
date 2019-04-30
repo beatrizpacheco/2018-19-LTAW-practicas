@@ -86,5 +86,47 @@ http.createServer((req, res) => {
     }
 
 
+      if (req.method === 'POST') {
+        // Handle post info...
+
+        var content = `
+        <!DOCTYPE html>
+        <html lang="es">
+          <head>
+            <meta charset="utf-8">
+            <title>FORM 1</title>
+          </head>
+          <body>
+            <p>Recibido: `
+
+        req.on('data', chunk => {
+            //-- Leer los datos (convertir el buffer a cadena)
+            data = chunk.toString();
+
+            //-- Añadir los datos a la respuesta
+            content += data;
+
+            //-- Fin del mensaje. Enlace al formulario
+            content += `
+                </p>
+                <a href="/">[Volver]</a>
+              </body>
+            </html>
+            `
+            //-- Mostrar los datos en la consola del servidor
+            console.log("Datos recibidos: " + data)
+            res.statusCode = 200;
+         });
+
+         req.on('end', ()=> {
+           //-- Generar el mensaje de respuesta
+           res.setHeader('Content-Type', 'text/html')
+           res.write(content);
+           res.end();
+         })
+         return
+    }
+
+
 
 }).listen(8080);
