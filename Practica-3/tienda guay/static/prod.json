@@ -1,0 +1,62 @@
+{
+    "Bicis": [{
+            "name": "bici 1",
+            "image": "./bici1.jpeg",
+            "color": "negro",
+            "talla": "S",
+            "price": "63"
+        },
+        {
+            "name": "bici 2",
+            "image": "./bici2.jpeg",
+            "color": "rojo",
+            "talla": "M",
+            "price": "95"
+        },
+        {
+            "name": "bici 3",
+            "image": "./bici3.jpeg",
+            "color": "amarillo",
+            "talla": "L",
+            "price": "127"
+        }
+    ],
+    "Libros": [{
+            "name": "Sarah Lark",
+            "image": "./libro1.jpeg",
+            "color": "5",
+            "price": "20.8"
+        },
+        {
+            "name": "Elisabet Benavent",
+            "image": "./libro2.jpeg",
+            "stock": "5",
+            "price": "17"
+        },
+        {
+            "name": "Stefan Zweig",
+            "image": "./libro3.jpeg",
+            "stock": "5",
+            "price": "24.7"
+        }
+    ],
+    "Discos": [{
+            "name": "La raiz",
+            "image": "./discos1.jpeg",
+            "stock": "5",
+            "price": "11.45"
+        },
+        {
+            "name": "Boikot",
+            "image": "./discos2.jpeg",
+            "stock": "5",
+            "price": "19.95"
+        },
+        {
+            "name": "La Pegatina",
+            "image": "./discos3.jpeg",
+            "stock": "5",
+            "price": "13.99"
+        }
+    ]
+}
