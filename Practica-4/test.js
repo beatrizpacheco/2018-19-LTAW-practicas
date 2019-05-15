@@ -53,22 +53,22 @@ io.on('connection', (socket) => { // si hay evento conection metemos traza
 
     //-- Notificarlo en la consola del servidor
     console.log("Mensaje recibido: " + msg)
-
-    if (msg == '/help' || msg == ' /help'){
-      msg = '<li>Help:' + '</li><li>' + '/list: Usuarios conectados'
-                + '</li><li>' + '/hello: Mensaje del servidor' + '</li><li>'
-                + '/date: Para saber la fecha</li>';
+    if (msg.split(' ',)[1] == '/help' || msg.split(' ',)[1] == ' /help'){
+      msg = '<br><u>Con el comando "help" puedes:</u><br>' +
+            '"/list": Ver la cantidad de usuarios conectados<br>' +
+            '"/hello": Recibir un mensaje del servidor<br>' +
+            '"/date": Saber la fecha<br>';
      socket.emit('new_message', msg);
 
-   }else if (msg == '/list' || msg == ' /list'){
+   }else if (msg.split(' ',)[1] == '/list' || msg.split(' ',)[1] == ' /list'){
      msg = 'El numero de usuarios conectados es: ' + numclients;
      socket.emit('new_message', msg);
 
-   }else if (msg == '/hello' || msg == ' /hello'){
+   }else if (msg.split(' ',)[1] == '/hello' || msg.split(' ',)[1] == ' /hello'){
      msg = 'HOLIIIIII, soy el jefesito';
      socket.emit('new_message', msg);
 
-   }else if (msg == '/date' || msg == ' /date'){
+   }else if (msg.split(' ',)[1] == '/date' || msg.split(' ',)[1] == ' /date'){
      var date = new Date();
      var month = new Array ("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
      var week = new Array("Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado");
