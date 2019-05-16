@@ -1,8 +1,11 @@
 {
   "name": "mi-electron-app",
   "version": "0.1.0",
-  "main": "main.js",
+  "main": "inicio.js",
   "scripts": {
     "start": "electron ."
+  },
+  "dependencies": {
+    "electron": "^5.0.1"
   }
 }

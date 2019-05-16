@@ -1,11 +1,8 @@
-const io = require('socket.io-client');
-const socket = io('http://localhost:3000',{transport:['websocket']});
-
 function main()
 {
-  console.log("Probando...")
-
-  var socket = io();
+  console.log("Iniciando chat_client...")
+  var person = prompt("Please enter your name");
+  var socket = io.connect("http://localhost:3000");
 
   //-- Obtener los elementos de interfaz:
 
@@ -15,37 +12,54 @@ function main()
  //-- Parrafo para mostrar mensajes recibidos
  var display = document.getElementById('display')
 
+ //-- usuarios
+ var usuarios = document.getElementById('user')
+
  //-- Caja con el mensaje a enviar
  var msg = document.getElementById("msg")
  if(msg){
     console.log(msg)
-  // -- Enviar el mensaje pulsando la tecla ENTER
+    // -- Enviar el mensaje pulsando la tecla ENTER
     msg.addEventListener("keyup", function(event){
       if (event.keyCode === 13){
         event.preventDefault();
         document.getElementById('send').click();
       }
     })
- }
- 
- //-- Cuando se aprieta el botón de enviar...
- send.onclick = () => {
-   console.log(msg.value);
-   //-- Enviar el mensaje, con el evento "new_message"
-   socket.emit('new_message', msg.value);
-   document.getElementById("msg").value = '';
+  }
 
-   //-- Lo notificamos en la consola del navegador
-   console.log("Mensaje emitido")
- }
+  socket.emit('persona', person)
 
- //-- Cuando se reciba un mensaje del servidor se muestra
+  //-- Cuando se aprieta el botón de enviar...
+  send.onclick = () => {
+    //-- Enviar el mensaje, con el evento "new_message"
+    socket.emit('new_message', person + ':' + msg.value);
+    //document.getElementById("msg").value = '';
+
+    //-- Lo notificamos en la consola del navegador
+    console.log("Mensaje emitido")
+    msg.value = " ";
+  }
+
+  //-- Cuando se reciba un mensaje del servidor se muestra
   //-- en el párrafo
+  socket.on('usuarios', usuar => {
+    usuarios.innerHTML = usuar
+    console.log(usuar)
+  });
 
+  socket.on('bienvenido', wel => {
+    display.innerHTML += wel + '<br>'
+  });
+  socket.on('Abandono', aban => {
+    display.innerHTML += aban + '<br>'
+  });
+
+
+  //-- Cuando se reciba un mensaje del servidor se muestra
+  //-- en el párrafo
   socket.on('new_message', msg => {
-    var mensaje = document.createElement("P");
-    mensaje.innerHTML = msg + '<br>';
-    mensajes.appendChild(mensaje);
+    display.innerHTML += msg + '<br>';
   });
 
 }
