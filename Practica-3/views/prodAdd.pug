@@ -7,11 +7,11 @@
     title= title
   </head>
   <body>
-      <p> LIBRERÍA <p>
+      <p> TIENDESITA <p>
       <div id="prodAdd">
         div
           each val in prod
-             img.box1#image(src=val.image width="480px" height="360px")
+             img.box1#image(src=val.image width="200px" height="140px")
              span= '    ' + val.name + ' - Precio: ' + val.price + '€   '
              button(type='button' class='button' onclick="shop_cookie('" + val.name + "')")= 'Add'
              br

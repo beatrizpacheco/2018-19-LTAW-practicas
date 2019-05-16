@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Tiendesita</title>
+    <title>Beatriz Pacheco Piñero</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/mi-css.css">
+    <script src="static/client.js"></script>
+
+</head>
+
+<body onload="buscar()">
+
+    <p id="title"> Tiendesita <p>
+    <i id="user">Bienvenido #{user}</i>
+
+    <div class="content">
+      <button id="ingreso" type="button" onclick="window.location.href='/ingreso'">Registro</button><br>
+      <button type="button" onclick="window.location.href='/bicis'"><img class="imag" src="/static/bici.jpeg" alt="gif">
+      <button type="button" onclick="window.location.href='/discos'"><img class="imag" src="/static/discos.jpeg" alt="gif">
+      <button type="button" onclick="window.location.href='/libros'"><img class="imag" src="/static/libros.jpeg" alt="gif">
+    </div>
+
+    <!-- Buscador -->
+    <form id="buscador" action="/search" method="POST">
+      <span class="icon"><i class="fa fa-search"></i></span>
+      <input type="text" list="busc" type="text" name='search' id="key" placeholder="¿Qué buscas?">
+      <input class="button" type="submit" name="submit" value="Buscar">
+      <datalist id="busc"></datalist>
+    </form>
+
+    <div>
+    <button type="button" onclick="carrito()" > <i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i>Finalizar compra</button>
+    </div>
+
+</body>
+
+</html>

@@ -2,11 +2,12 @@
 <html lang="es" dir="ltr">
 <head>
   <meta charset="utf-8">
-  <title>FORMULARIO 1</title>
+  <title>FORMULARIO</title>
+  <script src="static/client.js"></script>
 </head>
 <body>
 
-<h2>Formulario ingreso</h2>
+<h2>Finalizar compra</h2>
 
 <form action="/form1.html" method="post">
   Nombre:<br>
@@ -23,7 +24,7 @@
   <input type="radio" name="gender" value="female"> Tarjeta de crédito<br>
   <input type="radio" name="gender" value="other"> Transferencia bancaria<br>
 
-  <input action="/datos.html" type="submit" value="Enviar">
+  <input class="button" type="submit" value="Enviar" onclick="form_cookie()"/>
 </form>
 
 </body>

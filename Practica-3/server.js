@@ -1,3 +1,5 @@
+//-- npm install express npm install pug npm install cookie-parser
+//-- node server.js
 const http = require('http');
 const express = require('express');
 const cookieParser = require('cookie-parser')
@@ -53,21 +55,21 @@ app.post('/search', (req, res) => {
     res.render('prodAdd', { prod: prod, title: 'libro' });
 });
 
-//Clicar en  novela negra
-app.get('/negra', (req, res) => {
-    let prodTotal = mijson['NovelaNegra']
+//Clicar
+app.get('/bicis', (req, res) => {
+    let prodTotal = mijson['Bicis']
     res.render('prodAdd', { prod: prodTotal });
 });
 
-//Clicar en novela de misterio
-app.get('/misterio', (req, res) => {
-    let prodTotal = mijson['NovelaMisterio']
+//Clicar
+app.get('/libros', (req, res) => {
+    let prodTotal = mijson['Libros']
     res.render('prodAdd', { prod: prodTotal });
 });
 
-//Clicar en novela de fantasia
-app.get('/fantasia', (req, res) => {
-    let prodTotal = mijson['NovelaFantasia']
+//Clicar
+app.get('/discos', (req, res) => {
+    let prodTotal = mijson['Discos']
     res.render('prodAdd', { prod: prodTotal });
 });
 
