@@ -52,7 +52,7 @@ app.post('/search', (req, res) => {
         // });
         // res.send(prod);
         // res.render('prodCompleto', {prod: prod, name: name, img: img, stock: stock, price: price, title: 'Hey'});
-    res.render('prodAdd', { prod: prod, title: 'libro' });
+    res.render('prodAdd', { prod: prod, title: 'prod' });
 });
 
 //Clicar
@@ -103,6 +103,7 @@ function completeProd(data, mijson) {
             }
         });
     }
+    //console.log('LA PUTA COOKIE ES: ')
     console.log(prodTotal);
     return prodTotal;
 }

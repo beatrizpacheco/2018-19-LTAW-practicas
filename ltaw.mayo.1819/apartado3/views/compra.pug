@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="static/mi-css.css">
+  </head>
+  <body>
+      <p>TIENDESITA<p>
+      <p id="compra">¡ Tu compra ha sido realizada correctamente ! </p>
+      <div id="buy">
+            <!--<h3>Nombre: #{nombre}  #{apellido} </h3><h3>Correo: #{correo} </h3>Pagado con #{pago}-->
+
+            <h3>Compra: #{price}  € </h3>
+            <h3>Total (descuentos): #{price2} € </h3>
+            <div>
+              div
+                each val in prod
+                   img.box1#image(src=val.image width="90px" height="60px")
+                   span= '   ' + val.name + ' - Precio: ' + val.price + '€'
+                   br
+            </div>
+      </div>
+      <button id="acep" class="button" type="button" name="button" onclick="window.location.href='/'">Aceptar</button>
+  </body>
+</html>

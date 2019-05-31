@@ -11,9 +11,9 @@
     {% for product in productos %}
     <div class='products'>
         <img src= '{{ product.image }}' width="200px" height="140px">
-        <span>{{ product.name }}</span>
-        <span>{{ product.price }}</span>
-        <span>{{ product.stock }}</span>
+        <span>{{ product.name }}, </span>
+        <span>{{ product.price }}€, nos quedan en tienda: </span>
+        <span>{{ product.stock }} unidades</span>
     </div>
     {% endfor %}
   </body>

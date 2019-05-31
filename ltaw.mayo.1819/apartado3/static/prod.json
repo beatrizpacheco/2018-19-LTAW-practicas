@@ -1,0 +1,60 @@
+{
+    "Bicis": [{
+            "name": "bici 1",
+            "name": "bici1",
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRe9Tgd8Y8nUt_5D-4H8VrPCrVjJ1kYNuTMolKMwdvLDmUD8XEmYg",
+            "stock": "5",
+            "price": "63"
+        },
+        {
+            "name": "bici 2",
+            "image": "https://i.blogs.es/6c21e9/bici-bmw-2/450_1000.jpg",
+            "stock": "5",
+            "price": "95"
+        },
+        {
+            "name": "bici 3",
+            "image": "https://fabricbike.com/63-large_default/fixie-light.jpg",
+            "stock": "5",
+            "price": "127"
+        }
+    ],
+    "Libros": [{
+            "name": "Sarah Lark",
+            "image": "https://images-na.ssl-images-amazon.com/images/I/41h3dOJK4EL._SX324_BO1,204,203,200_.jpg",
+            "stock": "5",
+            "price": "20.8"
+        },
+        {
+            "name": "Elisabet Benavent",
+            "image": "https://images-na.ssl-images-amazon.com/images/I/715ox2qXXfL.jpg",
+            "stock": "5",
+            "price": "17"
+        },
+        {
+            "name": "Stefan Zweig",
+            "image": "https://cdn.gandhi.com.mx/media/catalog/product/cache/1/image/370x/9df78eab33525d08d6e5fb8d27136e95/i/m/image_1165_1_174113.jpg",
+            "stock": "5",
+            "price": "24.7"
+        }
+    ],
+    "Discos": [{
+            "name": "La raiz",
+            "image": "http://kontagiarte.com/wp-content/uploads/2016/02/12654542_1084613588248297_587405663454105525_n.png",
+            "stock": "5",
+            "price": "11.45"
+        },
+        {
+            "name": "Boikot",
+            "image": "https://st-listas.20minutos.es/images/2009-04/95780/list_640px.jpg?1240155590",
+            "stock": "5",
+            "price": "19.95"
+        },
+        {
+            "name": "La Pegatina",
+            "image": "https://www.lapegatina.com/data/img/a29db4db869e36f112910311dccd9813-484x433-1-98-DoPYeeet_400x400.jpg",
+            "stock": "5",
+            "price": "13.99"
+        }
+    ]
+}

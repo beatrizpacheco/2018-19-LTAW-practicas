@@ -1,6 +1,6 @@
 function PeticionAJAX() {
     let request = new XMLHttpRequest();
-    request.open('GET', 'static/libros.json', false);
+    request.open('GET', 'static/prod.json', false);
     request.send();
 
     let prod = JSON.parse(request.responseText);
@@ -55,7 +55,7 @@ function reg_cookie() {
             alert("¡Cierra navegador para cambiar de usuario!");
         }
     } else {
-        document.cookie = "username = " + username;
+        document.cookie = "username = " + username; ////  document.cookie = "nameS=; expires=Thu, 01 Jan 1970 00:00:00 UTC";
         document.cookie = "contraseña = " + contraseña;
     }
 }
