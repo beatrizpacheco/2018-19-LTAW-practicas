@@ -31,3 +31,13 @@ class Libro (models.Model):
 
     def __str__(self):
         return self.author
+
+class Espada (models.Model):
+    author = models.CharField(max_length=200)
+    title = models.CharField(max_length=200)
+    image = models.CharField(max_length=200)
+    stock = models.IntegerField()
+    price = models.FloatField()
+
+    def __str__(self):
+        return self.author

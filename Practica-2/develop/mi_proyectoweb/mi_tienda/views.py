@@ -7,6 +7,7 @@ from django.http import HttpResponse
 from mi_tienda.models import Bici
 from mi_tienda.models import Disco
 from mi_tienda.models import Libro
+from mi_tienda.models import Espada
 
 # Create your views here.
 def home_view (request):
@@ -25,3 +26,7 @@ def discos (request):
 def libros (request):
     libros = Libro.objects.all()
     return render(request, "productos.html", {'productos':libros})
+
+def espada (request):
+    espada = Espada.objects.all()
+    return render(request, "productos.html", {'productos':espada})

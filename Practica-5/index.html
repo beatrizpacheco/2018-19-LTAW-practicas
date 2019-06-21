@@ -1,19 +1,20 @@
 <!DOCTYPE html>
+<!-- export ELECTRON_DISABLE_SECURITY_WARNINGS=true -->
+
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>CHAT</title>
+    <title>MI CHAT PEPIIINO</title>
     <script src="/socket.io/socket.io.js"></script>
     <script src="./node_modules/socket.io-client/dist/socket.io.js"></script>
-    <script src="chat-client.js"></script>
-    <link rel="stylesheet" href="static/index.css">
-    <link rel="icon" type="image/png" href="static/icon.png">
+    <script src="chat_client.js"></script>
+    <link rel="stylesheet" href="mycss.css">
   </head>
   <body onload="main();">
     <p id="title">Chat</p><br></br>
     <input id="user" autocomplete="off" placeholder="Nombre de usuario"/>
     <span id="input"><input id="msg" autocomplete="off"/></span>
-    <button class="button "type="button" id="send">SEND</button><br></br>
+    <button class="button "type="button" id="send">ENVIAR</button><br></br>
     <p id="display"></p>
   </body>
 </html>

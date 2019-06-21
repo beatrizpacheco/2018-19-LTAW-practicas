@@ -18,6 +18,12 @@ app.get('/chat-client.js', function(req, res){
   console.log("Client solicitado")
 });
 
+//-- caso de haber css
+app.get('/mycss.css', (req, res) => {
+  res.sendFile(__dirname + '/mycss.css');
+  console.log("/mycss.css")
+});
+
 //Lanzar el servidor
 http.listen(3000, function(){
   console.log('listening on :3000');
@@ -28,7 +34,7 @@ io.on('connection', function(socket){
   console.log('--> Usuario conectado!');
   user= user + 1;
   // Enviar saludo al que se conecta
-  msg = 'Hi man !';
+  msg = 'Bienvenido !';
   socket.emit('new_message', msg);
 
   //Envio a todos usuarios menos al que se conecta (lo envia)
@@ -58,18 +64,15 @@ io.on('connection', function(socket){
        msg = 'Hello, whats up! ';
        socket.emit('new_message', msg);
      } else if (m == '/date') {
-       let f = new Date();
-       // msg = 'La fecha actual es: ' + f.getDate() + "/" + (f.getMonth() + 1) + "/" + f.getFullYear();
-       let meses = new Array ("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
-       let diasSemana = new Array("Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado");
-
-       msg = 'La fecha actual es: ' + diasSemana[f.getDay()] + ", " + f.getDate() + " de " + meses[f.getMonth()] + " de " + f.getFullYear();
+       var date = new Date();
+       var month = new Array ("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
+       var week = new Array("Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado");
+       msg = 'La fecha de hoy es: ' + week[date.getDay()] + ", " + date.getDate() + " de " + month[date.getMonth()] + " de " + date.getFullYear();
        socket.emit('new_message', msg);
      }else {
        //Emitir mensaje todos clientes conectados
        io.emit('new_message', msg);
      }
-     //Consola del servidor
-     console.log("Mensaje recibido: " + msg)
+
    })
 });

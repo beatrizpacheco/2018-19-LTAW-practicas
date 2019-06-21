@@ -1,8 +1,8 @@
 function CargarJsonLocal(params) {
-    var request2 = new XMLHttpRequest();
-    request2.open("GET", "products.json", false);
-    request2.send()
-    console.log(request2.responseType);
-    var people2 = JSON.parse(request2.responseText);
-    console.log(people2);
+    var request = new XMLHttpRequest();
+    request.open("GET", "products.json", false);
+    request.send()
+    console.log(request.responseType);
+    var jdt = JSON.parse(request.responseText);
+    console.log(jdt);
 }

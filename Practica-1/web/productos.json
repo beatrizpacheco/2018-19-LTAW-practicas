@@ -1,0 +1,26 @@
+[
+    {
+        "name": "esquis",
+        "color": "orange",
+        "style": "begginer",
+        "image": "esquis.png"
+    },
+    {
+        "name": "esquis",
+        "color": "blue",
+        "style": "expert",
+        "image": "esquis.png"
+    },
+    {
+        "name": "boots",
+        "color": "blue",
+        "style": "begginer",
+        "image": "Botas.jpg"
+    },
+    {
+        "name": "esquis",
+        "color": "orange",
+        "style": "expert",
+        "image": "Botas.jpg"
+    }
+]

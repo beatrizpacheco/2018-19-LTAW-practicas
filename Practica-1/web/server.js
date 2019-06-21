@@ -71,7 +71,20 @@ http.createServer((req, res) => {
         })
 
     }
+    if (req.url.split(".")[1] == 'json') {
+        let dir_path = path.join(__dirname, req.url)
+        console.log(dir_path);
 
+        fs.readFile(dir_path, (err, data) => {
+
+            res.writeHead(200, { 'Content-Type': 'application/json' })
+            console.log("---> Peticion recibida")
+            console.log("Recurso solicitado (URL): " + req.url)
+            res.end(data)
+
+        })
+
+    }
 
 
 }).listen(8080);
