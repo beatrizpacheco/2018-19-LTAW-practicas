@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="static/mi-css.css">
+    <script src="static/client.js"></script>
+    title= title
+  </head>
+  <body>
+      <p> TIENDESITA <p>
+      <div id="prodAdd">
+        div
+          each val in prod
+             img.box1#image(src=val.image width="200px" height="140px")
+             span= '    ' + val.name + ' - Precio: ' + val.price + '€   '
+             button(type='button' class='button' onclick="shop_cookie('" + val.name + "')")= 'Add'
+             br
+             span= '               ' + 'stock:' + val.stock
+             br
+             br
+      </div>
+  </body>
+</html>

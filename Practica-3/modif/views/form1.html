@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>FORMULARIO</title>
+  <script src="static/client.js"></script>
+</head>
+<body>
+
+<h2>Finalizar compra</h2>
+
+<form action="/compra" method="post">
+  Nombre:<br>
+  <input type="text" name="nombre" placeholder="Nombre" value="">
+  <br>
+  Apellidos:<br>
+  <input type="text" name="lastname" placeholder="Apellido" value="">
+  <br>
+  Correo electrónico<br>
+  <input type="text" name="lastname" placeholder="Email" value="">
+  <br>
+  Cupón descuento<br>
+  <input type="text" id="desc" name="desc" placeholder="Descuento" value="">
+  <br>
+  Método de pago: <br>
+  <input type="radio" name="gender" value="male" checked> Paypal<br>
+  <input type="radio" name="gender" value="female"> Tarjeta de crédito<br>
+  <input type="radio" name="gender" value="other"> Transferencia bancaria<br>
+
+  <input class="button" type="submit" value="Enviar" onclick="form_cookie()"/>
+</form>
+
+</body>
+</html>
